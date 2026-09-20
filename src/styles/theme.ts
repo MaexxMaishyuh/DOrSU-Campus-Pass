@@ -8,7 +8,7 @@ export const colors = {
  
   tealDark: '#0C3559',
   
-  background: '#BAE6FD',
+  background: '#e7daff',
 
   white: '#FFFFFF',
   

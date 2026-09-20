@@ -6,8 +6,8 @@ import { StatusBadge } from './StatusBadge';
 import { colors } from '../styles/theme';
 
 interface StudentCardProps {
-  readonly student: StudentProfile;
-  readonly isActive: boolean;
+  student: StudentProfile;
+  isActive: boolean;
 }
 
 export function StudentCard({
@@ -30,7 +30,7 @@ export function StudentCard({
     <View style={styles.card}>
       <View style={styles.heading}>
         <Text style={styles.label}>STUDENT PROFILE</Text>
-        <Text style={styles.sample}>LAB DEMO</Text>
+        <StatusBadge isActive={isActive} />
       </View>
 
       <View style={styles.topRow}>
@@ -63,8 +63,6 @@ export function StudentCard({
 
       <View style={styles.divider} />
 
-      <StatusBadge isActive={isActive} />
-
       <Text style={styles.campus}>
         Campus: {student.campus}
       </Text>
@@ -75,9 +73,9 @@ export function StudentCard({
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.white,
-    borderWidth: 1,
-    borderColor: colors.line,
-    borderRadius: 22,
+    borderWidth: 2,
+    borderColor: '#512DA8',
+    borderRadius: 24,
     padding: 20,
     gap: 15,
   },
@@ -91,17 +89,10 @@ const styles = StyleSheet.create({
   },
 
   label: {
-    color: colors.muted,
+    color: '#512DA8',
     fontSize: 10,
     fontWeight: '800',
     letterSpacing: 1.5,
-  },
-
-  sample: {
-    color: colors.teal,
-    fontSize: 9,
-    fontWeight: '700',
-    letterSpacing: 1,
   },
 
   topRow: {
@@ -114,8 +105,8 @@ const styles = StyleSheet.create({
     width: 88,
     height: 88,
     borderRadius: 44,
-    borderWidth: 3,
-    borderColor: colors.teal,
+    borderWidth: 2,
+    borderColor: '#512DA8',
     backgroundColor: colors.white,
     overflow: 'hidden',
     flexShrink: 0,
@@ -124,7 +115,7 @@ const styles = StyleSheet.create({
   avatar: {
     width: '100%',
     height: '100%',
-    borderRadius: 41,
+    borderRadius: 45,
   },
 
   details: {
@@ -139,30 +130,32 @@ const styles = StyleSheet.create({
   },
 
   idNumber: {
-    color: colors.teal,
+    color: '#512DA8',
     fontSize: 12,
     fontWeight: '700',
   },
 
   program: {
-    color: colors.muted,
+    color: '#180101',
     fontSize: 12,
     lineHeight: 18,
   },
 
   yearLevel: {
-    color: colors.muted,
+    color: '#000000',
     fontSize: 12,
   },
 
   divider: {
-    height: 1,
-    backgroundColor: colors.line,
+    height: 2,
+    backgroundColor: '#512DA8',
   },
 
   campus: {
-    color: colors.muted,
-    fontSize: 11,
-    lineHeight: 17,
+  color: '#000000',
+  fontSize: 11,
+  lineHeight: 16,
+  textAlign: 'center',
+
   },
 });
